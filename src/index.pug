@@ -17,22 +17,23 @@ html(lang="en")
           .container
 
             header.header
-              .logo АГ
+              .logo.title АГ
 
               nav.nav
-                ul.nav__list
                 - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-                  each item in list
-                  li.nav__item
-                    a.nav__link #{item}
+                  ul.nav__list
+                    each item in list
+                      li.nav__item
+                        a.nav__link #{item} 
 
+              - var socials = ['insta', 'vk', 'github'];
               ul.socials
-                li.socials__item
-                li.socials__item                
-                li.socials__item                
+                each item in socials
+                  li.socials__item
+                    +icon(item, 'socials__item-icon')
 
-            .intro__content            
-              h2.intro__sub-title.sub-title Личный сайт веб разработчика
+            .intro__content
+              h2.intro__sub-title.sub-title Личный сайт <br>веб разработчика</br>
               h1.intro__title.title Артур Губарь
 
             button.scroll

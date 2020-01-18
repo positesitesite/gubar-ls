@@ -1,10 +1,25 @@
 section.intro {
+  display: flex;
+  align-items: center;
+
   background-image: url('/src/images/content/intro-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.logo {
-  color: $white;
+.intro .container {
+  height: 90%;
+}
+
+.intro__content {
+  position: relative;
+  display: flex;
+}
+
+.intro__sub-title {
+  position: absolute;
+  left: -40%;
+  top: 20px;
+  text-align: right;
 }
