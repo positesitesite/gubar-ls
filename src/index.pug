@@ -14,6 +14,8 @@ html(lang="en")
       .main-content
 
         section.intro
+
+          +image('train', 'intro__parallax-img')
           .container
 
             header.header
@@ -41,20 +43,24 @@ html(lang="en")
               +icon('scroll', 'scroll__icon')
 
         section.about
+
+          +image('about-bg', 'about__parallax-img')
           .container
 
             .about__brief
-              img.about__img
-              ul.about__info
-                li.about__info-item
-                  .about__info-item-name Проживаю
-                  .about__info-item-content Бангкок
-                li.about__info-item
-                  .about__info-item-name Возраст
-                  .about__info-item-content 24 года
-                li.about__info-item
-                  .about__info-item-name Родился
-                  .about__info-item-content 19 мая 1995
+              +image('me', 'profile__img')
+
+              ul.profile__info
+                - 
+                  var items = [
+                    ['Проживаю', 'Бангкок'],
+                    ['Возраст', '24 года'],
+                    ['Родился', '19 мая 1995'],
+                  ]
+                each item in items
+                  li.profile__info-item
+                    .profile__info-item-name #{item[0]}
+                    .profile__info-item-content #{item[1]}
 
             .about__descr
               p.about__descr-text Привет, меня зовут

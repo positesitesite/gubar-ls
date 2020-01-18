@@ -1,14 +1,15 @@
-section.intro {
+.intro {
   display: flex;
   align-items: center;
 
-  background-image: url('/src/images/content/intro-bg.png');
+  background-image: url('../images/content/intro-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .intro .container {
+  flex-direction: column;
   height: 90%;
 }
 
@@ -22,4 +23,12 @@ section.intro {
   left: -40%;
   top: 20px;
   text-align: right;
+  z-index: 10;
+}
+
+.intro__parallax-img {
+  position: absolute;
+  min-width: 100vw;
+  top: 8%;
+  z-index: 1;
 }
