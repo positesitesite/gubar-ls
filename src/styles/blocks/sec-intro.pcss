@@ -1,6 +1,5 @@
 .intro {
-  position: absolute;
-  top: 0;
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -13,7 +12,8 @@
 
 .intro .container {
   flex-direction: column;
-  
+  justify-content: space-between;
+
   height: 90%;
 }
 
@@ -33,6 +33,6 @@
 .intro__parallax-img {
   position: absolute;
   min-width: 100vw;
-  top: 46%;
-  z-index: 1;
+  top: 50%;
+  z-index: 10;
 }

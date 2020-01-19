@@ -3,12 +3,71 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 36%;
+    
+    width: 34%;
+    height: 100%;
+    background-image: url('../images/content/skills-hands.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .skills .container {
+  position: relative;
   flex-direction: column;
+  align-items: flex-start;
+  padding-top: 140px;
+  padding-left: 30%;
+  padding-bottom: 148px;
+}
+
+.skills__title.sub-title {
+  color: $white;
+  margin-bottom: 59px;
+}
+
+.skills__text {
+  padding-bottom: 96px;
+}
+
+.skills__block {
+  padding-left: 135px;
 }
 
 .skills__item {
-  height: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.skills__progress {
+  position: relative;
+
+  width: 134px;
+  fill: transparent;
+}
+
+.skills__progress-circle {
+  fill: transparent;
+  stroke: #e9e9e9;
+  stroke-width: 10PX;
+}
+
+.skills__progress-circle-id {
+  stroke-dasharray: 180;
+  stroke-width: 20PX;
+  stroke: url(#gradient);
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+}
+
+.skills__name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
