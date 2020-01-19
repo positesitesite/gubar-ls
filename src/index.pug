@@ -156,44 +156,44 @@ html(lang="en")
           .overview__comments
 
             .overview__comments-blockline
-              .overview__comments-title Что обо мне говорят
+              .overview__comments-title.sub-title Что обо мне говорят
               .overview__comments-control
                 .overview__comments-control-prev
-                  svg
+                  +icon('arrow-prev', 'overview__comments-control-prev-icon')
                 .overview__comments-control-next
-                  svg
+                  +icon('arrow-next', 'overview__comments-control-next-icon')
 
             .overview__comments-blockline
               .overview__comments-container
-                .overview__comments-text
-                .overview__comments-person
+                .overview__comments-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                .overview__comments-person 
                   .overview__comments-person-img-wrapper
-                    .overview__comments-person-img
+                    +image('dmitry', 'overview__comments-person-img')
                   .overview__comments-person-info                    
-                    .overview__comments-person-name
-                    .overview__comments-person-occup
+                    .overview__comments-person-name Ковальчук Дмитрий
+                    .overview__comments-person-occup Основатель Loftschool
               .overview__comments-container
-                .overview__comments-text
+                .overview__comments-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
                 .overview__comments-person
                   .overview__comments-person-img-wrapper
-                    .overview__comments-person-img
+                    +image('vladimir', 'overview__comments-person-img')
                   .overview__comments-person-info                    
-                    .overview__comments-person-name
-                    .overview__comments-person-occup
+                    .overview__comments-person-name Владимир Сабанцев
+                    .overview__comments-person-occup Преподаватель
 
           .overview__contact
-            h2.overview__contact-title.sub-title
+            h2.overview__contact-title.sub-title Связаться со мной
             form.overview__contact-form
               .form__row
                 label.form__item
-                  .form__hint Введите ваше имя
+                  .form__hint.form__user-icon Введите ваше имя
                   input.form__input(value="Jonatan Soderstrom") 
                 label.form__item
-                  .form__hint Введите вашу почту
+                  .form__hint.form__mail-icon Введите вашу почту
                   input.form__input(value="hotline@miami.com") 
               .form__row
                 label.form__item
-                  .form__hint Сообщение к письму
+                  .form__hint.form__msg-icon Сообщение к письму
                   input.form__input(value="Привет Артур")
               button.form__send-button
                 .form__send-button-text Отправить

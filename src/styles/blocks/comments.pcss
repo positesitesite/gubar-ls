@@ -1,0 +1,109 @@
+.overview .container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview__comments-blockline {
+  display: flex;
+
+  &:nth-child(1) {
+    padding-top: 150px;
+    margin-bottom: 100px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 150px;
+  }
+}
+
+.overview__comments-title {
+  margin-right: 119px;
+  color: $white;
+}
+
+.overview__comments-container {
+  width: 34%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overview__comments-text {
+  width: 50%;
+  line-height: 30px;
+  margin-bottom: 46px;
+
+  &:before {
+    position: absolute;
+    left: -70px;
+    content: '';
+    background-image: svg-load('quote.svg', fill=rgba($white, 0.1), width=100%, height=100%);
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+}
+
+.overview__comments-person {
+  display: flex;
+  align-items: center;
+}
+.overview__comments-person-img-wrapper {
+  margin-right: 31px;
+  width: 75px;
+}
+
+.overview__comments-person-name {
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.overview__comments-person-occup {
+  font-size: 16px;
+}
+
+
+// Controls
+.overview__ {
+
+
+  &comments-control {
+    display: flex;
+    align-items: center;
+
+    
+    &-next, &-prev {
+      background-color: transparent;
+      border: 1px solid $white;
+      height: 50px;
+      width: 50px;
+      
+      margin-right: 31px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-right: 20px;
+      padding-left: 20px;
+      border-radius: 50%;
+      
+
+      &:hover {
+        background-color: #465266;
+      }
+
+      &-icon {
+        width: 8px;
+        fill: white;
+      }
+    }
+
+
+  }
+
+
+}
+
+.overview__comments-person-img {
+  border-radius: 50%;
+}
