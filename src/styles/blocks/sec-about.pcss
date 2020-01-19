@@ -1,29 +1,38 @@
 .about {
+  position: absolute;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 }
 
 .about .container {
-  // position: relative;
   justify-content: center;
-  // align-items: center;
   z-index: 10;
 }
 
-.about__parallax-img {
+.about__parallax-grass {
   position: absolute;
-  z-index: 5;
+  top: -46%;
+  object-fit: cover;
+  z-index: 1;
 
-  min-width: 103%;
-  height: 200vh;
-  top: 5%;
-  left: -1%;
+  width: 100%;
+}
+
+.about__parallax-code {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+
+  height: 100%;
 }
 
 .about__brief {
-  width: 20%;
   margin-right: 158px;
+  width: 20%;
 }
 
 .about__descr {
