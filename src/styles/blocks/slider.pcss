@@ -1,16 +1,29 @@
+.portfolio__previewed {
+  position: relative;
+  width: 975px;
+  height: 549px;
+}
 
+.portfolio__previewed-image {
+  position: relative;
+  width: 100%;
+}
+
+.portfolio__slider-wrapper {
+  position: absolute;
+}
 
 .portfolio__ {
 
   &slider-wrapper {
-    position: relative;
+  //   position: relative;
 
     width: 975px;
-    height: 549px;
-    background-image: url('../images/content/preview-main.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 300px;
+  //   background-image: url('../images/content/preview-main.png');
+  //   background-size: cover;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
   }
 
   &slider-list {
@@ -22,7 +35,8 @@
   }
 
   &slider-item {
-    min-width: 25%;
+    // min-width: 25%;
+    width: 100%;
 
     &:hover {
       border: $orange 4px solid;
@@ -40,6 +54,7 @@
       flex-direction: column;
     }
     
+    // Control buttons styles
     &-next, &-prev {
       background-color: #353e4e;
       
@@ -54,10 +69,22 @@
 
       &-icon {
         width: 8px;
-        fill: white;
+        fill: $white;
       }
     }
+
+    // Number indicator
+    &-id {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #e6e6e6;
+      font-size: 400px;
+      font-weight: 800;
+    }
   }
+
 
 
 }

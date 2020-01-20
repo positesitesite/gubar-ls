@@ -1,26 +1,26 @@
 .scroll {
+  z-index: 100;
   display: flex;
   align-items: center;
 
   background-color: transparent;
-  z-index: 10;
+
+  &:hover {
+    .scroll__name {
+      color: $grey;
+    }
+    .scroll__icon {
+      fill: $grey;
+    }
+  }
 }
 
 .scroll__name {
   color: $white;
-
-  &:hover {
-    color: #ffffff;
-  }
 }
 
 .scroll__icon {
   width: 20px;
   min-height: 100%;
   fill: $white;
-
-  &:hover {
-    fill: #ffffff;
-  }
 }
-

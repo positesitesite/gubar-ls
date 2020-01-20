@@ -1,16 +1,23 @@
 .socials {
   display: flex;
+  white-space: nowrap;
 }
 
-.socials__item-icon {
-  margin-left: 20px;
+.socials__item {
+  margin-right: 20px;
+  
+  &-icon {
+    fill: $grey;
+    width: 20px;
+    min-height: 100%;
 
-  fill: $grey;
-  width: 20px;
-  min-height: 100%;
+    &:hover {
+      fill: $white;
+    }
+  }
 
-  &:hover {
-    fill: $white;
+  &:last-child {
+    margin-right: 0;
   }
 }
 

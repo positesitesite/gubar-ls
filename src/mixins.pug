@@ -1,6 +1,6 @@
 mixin icon(name, className)
   - var icon = require(`images/icons/${name}.svg`);
-  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="xMaxYMin")
     use(xlink:href=icon.url)
 
 mixin image(path, className)

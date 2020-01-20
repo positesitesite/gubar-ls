@@ -26,23 +26,24 @@ html(lang="en")
                   ul.nav__list
                     each item in list
                       li.nav__item
-                        a.nav__link #{item} 
+                        a.nav__link(href="#") #{item} 
 
               - var socials = ['insta', 'vk', 'github'];
               ul.socials
                 each item in socials
                   li.socials__item
-                    +icon(item, 'socials__item-icon')
+                    a.socials__item-link(target="_blank")
+                      +icon(item, 'socials__item-icon')
 
             .intro__content
               h2.intro__sub-title Личный сайт <br>веб разработчика</br>
               h1.intro__title.title Артур Губарь
 
-            button.scroll
+            a.scroll(href='#about')
               span.scroll__name Скролл
               +icon('scroll', 'scroll__icon')
 
-        section.about
+        section.about(id='about')
 
           +image('grass', 'about__parallax-grass')
           +image('code', 'about__parallax-code')
@@ -113,7 +114,7 @@ html(lang="en")
           .portfolio__preview-container
 
             .portfolio__previewed
-              img.portfolio__previewed-image
+              +image('preview-main', 'portfolio__previewed-image')
 
               //- Create wrapper for further reuse as component
               .portfolio__slider-wrapper  
@@ -127,13 +128,17 @@ html(lang="en")
                   li.portfolio__slider-item
                     +image('preview-4', 'portfolio__slider-item-preview')
 
-                  //- Slider controls buttons
-                  li.portfolio__slider-control
-                    .portfolio__slider-control-wrapper
-                      .portfolio__slider-control-next
-                        +icon('arrow-next', 'portfolio__slider-control-next-icon')
-                      .portfolio__slider-control-prev
-                        +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
+                //- Slider controls buttons
+                .portfolio__slider-control
+                  .portfolio__slider-control-wrapper
+                    button.portfolio__slider-control-next
+                      +icon('arrow-next', 'portfolio__slider-control-next-icon')
+                    button.portfolio__slider-control-prev
+                      +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
+
+                //- Number indicator
+                .portfolio__slider-control-id 3
+
                     
             .portfolio__descr              
               -var tags = ['HTML', 'CSS', 'JavaScript'];
@@ -158,9 +163,9 @@ html(lang="en")
             .overview__comments-blockline
               .overview__comments-title.sub-title Что обо мне говорят
               .overview__comments-control
-                .overview__comments-control-prev
+                button.overview__comments-control-prev
                   +icon('arrow-prev', 'overview__comments-control-prev-icon')
-                .overview__comments-control-next
+                button.overview__comments-control-next
                   +icon('arrow-next', 'overview__comments-control-next-icon')
 
             .overview__comments-blockline
@@ -194,7 +199,7 @@ html(lang="en")
               .form__row
                 label.form__item
                   .form__hint.form__msg-icon Сообщение к письму
-                  input.form__input(value="Привет Артур")
+                  textarea.form__input(value="Привет Артур")
               button.form__send-button
                 .form__send-button-text Отправить
 
@@ -204,25 +209,28 @@ html(lang="en")
 
               .footer__column
                 .footer__title.sub-title Артур Губарь
-                .footer__sub-title Личный сайт веб-разработчика
+                .footer__sub-title Личный сайт <br>веб-разработчика</br>
 
               .footer__column
 
                 .footer__row
-                  ul.footer__nav
-                    li.footer__nav-item Главная
-                    li.footer__nav-item Обо мне
-                    li.footer__nav-item Навыки
-                    li.footer__nav-item Работы
-                    li.footer__nav-item Отзывы
-                    li.footer__nav-item Связаться
+
+                  - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+                    ul.footer__nav
+                      each item in list
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") #{item} 
+
                 .footer__row
                   .footer__row-container
                     .footer__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+
+                    - var socials = ['insta', 'vk', 'github'];
                     ul.footer__socials
-                      li.footer__socials-icon 
-                      li.footer__socials-icon
-                      li.footer__socials-icon
+                      each item in socials
+                        li.footer__socials__item
+                          +icon(item, 'footer__socials__item-icon')
+
                   .footer__row-container
                     .footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                     .footer__quote-author Martin Golding
