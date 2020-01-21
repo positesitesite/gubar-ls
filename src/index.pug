@@ -15,7 +15,7 @@ html(lang="en")
 
         section.intro.full-screen
 
-          +image('train', 'intro__parallax-img')
+          +image('train', 'intro__parallax-img', 'background')
           .container
 
             header.header
@@ -131,9 +131,9 @@ html(lang="en")
                 //- Slider controls buttons
                 .portfolio__slider-control
                   .portfolio__slider-control-wrapper
-                    button.portfolio__slider-control-next
+                    button(type="button").portfolio__slider-control-next
                       +icon('arrow-next', 'portfolio__slider-control-next-icon')
-                    button.portfolio__slider-control-prev
+                    button(type="button").portfolio__slider-control-prev
                       +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
 
                 //- Number indicator

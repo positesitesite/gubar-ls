@@ -1,7 +1,10 @@
-mixin icon(name, className)
+mixin icon(name, className, ariaRole)
   - var icon = require(`images/icons/${name}.svg`);
-  svg(class=className viewBox=icon.viewBox preserveAspectRatio="xMaxYMin")
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="xMaxYMin" aria-role=ariaRole)
     use(xlink:href=icon.url)
 
-mixin image(path, className)
-  img(src=require(`images/content/${path}.png`) class=className)
+mixin image(path, className, alt)
+  //- if (alt == undefined) {
+  //-   alt = ""
+  //- }
+  img(src=require(`images/content/${path}.png`) class=className alt=`${alt}`)
