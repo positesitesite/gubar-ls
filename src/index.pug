@@ -13,7 +13,7 @@ html(lang="en")
 
       main.main-content
 
-        section.intro.full-screen
+        section.intro.full-screen#intro
 
           +image('train', 'intro__parallax-img', 'background')
           .container
@@ -43,7 +43,7 @@ html(lang="en")
               span.scroll__name Скролл
               +icon('scroll', 'scroll__icon')
 
-        section.about(id='about')
+        section.about#about
 
           +image('grass', 'about__parallax-grass')
           +image('code', 'about__parallax-code')
@@ -70,7 +70,7 @@ html(lang="en")
               p.about__descr-text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
               p.about__descr-text-comment Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
-      section.skills
+      section.skills#skills
         .container
 
           h3.skills__title.sub-title Чем я могу быть полезен вам
@@ -106,7 +106,7 @@ html(lang="en")
                         stop(offset="0%" stop-color='#d0731b')
                         stop(offset="100%" stop-color='#dc9322') 
 
-      section.portfolio
+      section.portfolio#portfolio
         .container 
 
           .portfolio__title.sub-title Мои работы
@@ -158,7 +158,7 @@ html(lang="en")
 
         .container
 
-          .overview__comments
+          .overview__comments#overview
 
             .overview__comments-blockline
               .overview__comments-title.sub-title Что обо мне говорят
@@ -186,9 +186,9 @@ html(lang="en")
                     .overview__comments-person-name Владимир Сабанцев
                     .overview__comments-person-occup Преподаватель
 
-          .overview__contact
-            h2.overview__contact-title.sub-title Связаться со мной
-            form.overview__contact-form
+          .contact#contact
+            h2.contact-title.sub-title Связаться со мной
+            form.contact-form
               .form__row
                 label.form__item
                   .form__hint.form__user-icon Введите ваше имя
@@ -200,7 +200,7 @@ html(lang="en")
                 label.form__item
                   .form__hint.form__msg-icon Сообщение к письму
                   textarea.form__input.textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
-              button.form__send-button
+              button(type="submit").form__send-button(value="Отправить" placeholder="Отправить")
                 .form__send-button-text Отправить
 
       section.end
@@ -209,14 +209,14 @@ html(lang="en")
 
               .footer__column
                 .footer__title.sub-title Артур Губарь
-                .footer__sub-title Личный сайт <br>веб-разработчика</br>
+                .footer__descr Личный сайт <br>веб-разработчика</br>
 
               .footer__column
 
                 .footer__row
 
                   - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-                    ul.footer__nav
+                    ul.footer__nav-list
                       each item in list
                         li.footer__nav-item
                           a.footer__nav-link(href="#") #{item} 

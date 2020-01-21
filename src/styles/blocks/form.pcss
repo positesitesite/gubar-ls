@@ -1,6 +1,6 @@
 .form__row {
   display: flex;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .form__item {
@@ -20,12 +20,18 @@
   background-color: transparent;
   border: transparent;
   border-bottom: 1px solid rgba($white, 0.5);
+
+  &:focus {
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid rgba($orange, 0.5);
+  }
 }
 
 .form__user-icon {
   &:after {
     position: absolute;
-    left: 0px;
+    left: -16px;
     top: 39px;
     content: '';
     display: block;
@@ -39,7 +45,7 @@
 .form__mail-icon {
   &:after {
     position: absolute;
-    left: 0px;
+    left: -16px;
     top: 39px;
     content: '';
     display: block;
@@ -53,7 +59,7 @@
 .form__msg-icon {
   &:after {
     position: absolute;
-    left: 0px;
+    left: -16px;
     top: 39px;
     content: '';
     display: block;
@@ -65,7 +71,8 @@
 }
 
 .form__send-button {
-  padding: 20px 60px;
+  margin-top: 40px;
+  padding: 32px 128px;
   background: $orange;
   color: $white;
   font-weight: 700;
