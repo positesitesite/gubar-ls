@@ -1,23 +1,19 @@
-.overview .container {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .overview__comments-blockline {
   display: flex;
 
   &:nth-child(1) {
-    padding-top: 150px;
-    margin-bottom: 100px;
+    padding-top: 140px;
+    margin-bottom: 90px;
   }
 
   &:nth-child(2) {
-    margin-bottom: 150px;
+    margin-bottom: 190px;
+    padding-left: 127px;
   }
 }
 
 .overview__comments-title {
-  margin-right: 119px;
+  margin-right: 83px;
   color: $white;
 }
 
@@ -27,12 +23,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-right: 42px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .overview__comments-text {
-  width: 50%;
+  width: 74%;
   line-height: 30px;
-  margin-bottom: 46px;
+  margin-bottom: 21px;
 
   &:before {
     position: absolute;

@@ -101,7 +101,7 @@ html(lang="en")
                     .skills__name #{skill}
 
                     //- Gradient
-                    svg(style="width:0; height:0; position: absolute;" aria-hidden="true")
+                    svg(style="width:0; height:0; position: absolute;" aria-hidden="true").skills__progress-gradient
                       linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
                         stop(offset="0%" stop-color='#d0731b')
                         stop(offset="100%" stop-color='#dc9322') 
@@ -192,14 +192,14 @@ html(lang="en")
               .form__row
                 label.form__item
                   .form__hint.form__user-icon Введите ваше имя
-                  input.form__input(value="Jonatan Soderstrom") 
+                  input.form__input(placeholder="Jonatan Soderstrom") 
                 label.form__item
                   .form__hint.form__mail-icon Введите вашу почту
-                  input.form__input(value="hotline@miami.com") 
+                  input.form__input(placeholder="hotline@miami.com") 
               .form__row
                 label.form__item
                   .form__hint.form__msg-icon Сообщение к письму
-                  textarea.form__input(value="Привет Артур")
+                  textarea.form__input.textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
               button.form__send-button
                 .form__send-button-text Отправить
 

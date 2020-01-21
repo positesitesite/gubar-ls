@@ -1,0 +1,39 @@
+.skills {
+  position: relative;
+  background-image: url('../images/content/skills-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 16%;
+
+    width: 34%;
+    height: 100%;
+    background-image: url('../images/content/skills-hands.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.skills .container {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 140px;
+  padding-left: 28.5%;
+  padding-bottom: 148px;
+}
+
+.skills__title.sub-title {
+  color: $white;
+  margin-bottom: 48px;
+}
+
+.skills__text {
+  padding-bottom: 80px;
+  max-width: 650px;
+  line-height: 30px;
+}
