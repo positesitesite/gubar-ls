@@ -4,7 +4,5 @@ mixin icon(name, className, ariaRole)
     use(xlink:href=icon.url)
 
 mixin image(path, className, alt)
-  //- if (alt == undefined) {
-  //-   alt = ""
-  //- }
-  img(src=require(`images/content/${path}.png`) class=className alt=`${alt}`)
+  - var newAlt = alt || " ";
+  img(src=require(`images/content/${path}.png`) class=className alt=newAlt)

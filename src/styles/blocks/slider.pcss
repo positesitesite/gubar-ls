@@ -1,11 +1,11 @@
 .portfolio__previewed {
   position: relative;
-  width: 975px;
-  height: 549px;
+  width: 100%;
+  height: 100%;
+  max-width: 975px;
 }
 
 .portfolio__previewed-image {
-  position: relative;
   width: 100%;
 }
 
@@ -29,9 +29,12 @@
   &slider-list {
     position: absolute;
     display: flex;
+    width: 85%;
+    height: 22%;
+    transform: translateX(-100%);
 
-    top: 70%;
-    left: 30%;
+    top: 63%;
+    left: 100%;
   }
 
   &slider-item {
@@ -43,25 +46,26 @@
     }
   }
 
+  &slider-item-preview {
+    width: 100%;
+    height: 100%;
+  }
+
   &slider-control {
+    height: 22%;
+    width: 6%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: absolute;
+    top: 63%;
     left: 100%;
-
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
     
     // Control buttons styles
     &-next, &-prev {
+      width: 100%;
+      height: 100%;
       background-color: #353e4e;
-      
-      padding-top: 13px;
-      padding-bottom: 13px;
-      padding-right: 20px;
-      padding-left: 20px;
 
       &:hover {
         background-color: #465266;
@@ -77,8 +81,8 @@
     &-id {
       z-index: -1;
       position: absolute;
-      top: 0;
-      left: 0;
+      // top: 70%;
+      // left: 0;
       color: #e6e6e6;
       font-size: 400px;
       font-weight: 800;

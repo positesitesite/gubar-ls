@@ -15,7 +15,7 @@ html(lang="en")
 
         section.intro.full-screen#intro
 
-          +image('train', 'intro__parallax-img', 'background')
+          +image('train', 'intro__parallax-img')
           .container
 
             header.header
@@ -32,7 +32,7 @@ html(lang="en")
               ul.socials
                 each item in socials
                   li.socials__item
-                    a.socials__item-link(target="_blank")
+                    a.socials__item-link(target="_blank" href="#")
                       +icon(item, 'socials__item-icon')
 
             .intro__content
@@ -117,27 +117,25 @@ html(lang="en")
               +image('preview-main', 'portfolio__previewed-image')
 
               //- Create wrapper for further reuse as component
-              .portfolio__slider-wrapper  
-                ul.portfolio__slider-list
-                  li.portfolio__slider-item
-                    +image('preview-1', 'portfolio__slider-item-preview')
-                  li.portfolio__slider-item
-                    +image('preview-2', 'portfolio__slider-item-preview')
-                  li.portfolio__slider-item
-                    +image('preview-3', 'portfolio__slider-item-preview')
-                  li.portfolio__slider-item
-                    +image('preview-4', 'portfolio__slider-item-preview')
+              ul.portfolio__slider-list
+                li.portfolio__slider-item
+                  +image('preview-1', 'portfolio__slider-item-preview')
+                li.portfolio__slider-item
+                  +image('preview-2', 'portfolio__slider-item-preview')
+                li.portfolio__slider-item
+                  +image('preview-3', 'portfolio__slider-item-preview')
+                li.portfolio__slider-item
+                  +image('preview-4', 'portfolio__slider-item-preview')
 
-                //- Slider controls buttons
-                .portfolio__slider-control
-                  .portfolio__slider-control-wrapper
-                    button(type="button").portfolio__slider-control-next
-                      +icon('arrow-next', 'portfolio__slider-control-next-icon')
-                    button(type="button").portfolio__slider-control-prev
-                      +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
+              //- Slider controls buttons
+              .portfolio__slider-control
+                button(type="button").portfolio__slider-control-next
+                  +icon('arrow-next', 'portfolio__slider-control-next-icon')
+                button(type="button").portfolio__slider-control-prev
+                  +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
 
-                //- Number indicator
-                .portfolio__slider-control-id 3
+              //- Number indicator
+              .portfolio__slider-control-id 3
 
                     
             .portfolio__descr              
