@@ -1,0 +1,48 @@
+section.overview
+
+  .container
+
+    .overview__comments#overview
+
+      .overview__comments-blockline
+        .overview__comments-title.sub-title Что обо мне говорят
+        .overview__comments-control
+          button.overview__comments-control-prev
+            +icon('arrow-prev', 'overview__comments-control-prev-icon')
+          button.overview__comments-control-next
+            +icon('arrow-next', 'overview__comments-control-next-icon')
+
+      .overview__comments-blockline
+        .overview__comments-container
+          .overview__comments-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+          .overview__comments-person 
+            .overview__comments-person-img-wrapper
+              +image('dmitry', 'overview__comments-person-img')
+            .overview__comments-person-info                    
+              .overview__comments-person-name Ковальчук Дмитрий
+              .overview__comments-person-occup Основатель Loftschool
+        .overview__comments-container
+          .overview__comments-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          .overview__comments-person
+            .overview__comments-person-img-wrapper
+              +image('vladimir', 'overview__comments-person-img')
+            .overview__comments-person-info                    
+              .overview__comments-person-name Владимир Сабанцев
+              .overview__comments-person-occup Преподаватель
+
+    .contact#contact
+      h2.contact-title.sub-title Связаться со мной
+      form.contact-form
+        .form__row
+          label.form__item
+            .form__hint.form__user-icon Введите ваше имя
+            input.form__input(placeholder="Jonatan Soderstrom") 
+          label.form__item
+            .form__hint.form__mail-icon Введите вашу почту
+            input.form__input(placeholder="hotline@miami.com") 
+        .form__row
+          label.form__item
+            .form__hint.form__msg-icon Сообщение к письму
+            textarea.form__input.textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
+        button(type="submit").form__send-button(value="Отправить" placeholder="Отправить")
+          .form__send-button-text Отправить

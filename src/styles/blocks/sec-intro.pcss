@@ -20,6 +20,7 @@ section.intro {
 .intro__content {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .intro__sub-title {
@@ -30,6 +31,11 @@ section.intro {
   top: 20px;
   text-align: right;
   z-index: 10;
+
+  @include tablets {
+    position: static;
+    text-align: center;
+  }
 }
 
 .intro__parallax-img {
@@ -38,3 +44,4 @@ section.intro {
   top: 50%;
   z-index: 10;
 }
+

@@ -1,3 +1,4 @@
+// Slider container
 .portfolio__previewed {
   position: relative;
   width: 100%;
@@ -5,27 +6,15 @@
   max-width: 975px;
 }
 
-.portfolio__previewed-image {
-  width: 100%;
-}
-
-.portfolio__slider-wrapper {
-  position: absolute;
-}
-
+// Slider in portfolio section
 .portfolio__ {
 
-  &slider-wrapper {
-  //   position: relative;
-
-    width: 975px;
-    height: 300px;
-  //   background-image: url('../images/content/preview-main.png');
-  //   background-size: cover;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
+  // Main image
+  &previewed-image {
+    width: 100%;
   }
 
+  // UL list
   &slider-list {
     position: absolute;
     display: flex;
@@ -37,8 +26,8 @@
     left: 100%;
   }
 
+  // Li item container
   &slider-item {
-    // min-width: 25%;
     width: 100%;
 
     &:hover {
@@ -46,11 +35,13 @@
     }
   }
 
+  // LI image inside of container
   &slider-item-preview {
     width: 100%;
     height: 100%;
   }
 
+  // Controls
   &slider-control {
     height: 22%;
     width: 6%;
@@ -79,16 +70,15 @@
 
     // Number indicator
     &-id {
-      z-index: -1;
       position: absolute;
-      // top: 70%;
-      // left: 0;
+      left: 86%;
+      top: 0px;
+      transform: translateY(-40.5%);
+      z-index: -1;
       color: #e6e6e6;
       font-size: 400px;
       font-weight: 800;
     }
-  }
-
-
+  } // End of porfolio block
 
 }

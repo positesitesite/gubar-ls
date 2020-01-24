@@ -16,3 +16,12 @@
 .nav__link:hover, .footer__nav-item:hover {
   color: $white;
 }
+
+// Only tablet and phones
+.nav__small-screen {
+  display: none;
+
+  @include tablets {
+    display: flex;
+  }
+}

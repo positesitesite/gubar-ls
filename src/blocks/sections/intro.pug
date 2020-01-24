@@ -1,0 +1,37 @@
+section.intro.full-screen#intro
+
+  +image('train', 'intro__parallax-img')
+  .container
+
+    header.header
+      .logo.title АГ
+
+      nav.nav
+        - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+          ul.nav__list
+            each item in list
+              li.nav__item
+                a.nav__link(href="#") #{item}
+
+      nav.nav__small-screen
+        - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+          ul.nav__list
+            each item in list
+              li.nav__item
+                a.nav__link(href="#") #{item}
+
+
+      - var socials = ['insta', 'vk', 'github'];
+      ul.socials
+        each item in socials
+          li.socials__item
+            a.socials__item-link(target="_blank" href="#")
+              +icon(item, 'socials__item-icon')
+
+    .intro__content
+      h2.intro__sub-title Личный сайт <br>веб разработчика</br>
+      h1.intro__title.title Артур Губарь
+
+    a.scroll(href='#about')
+      span.scroll__name Скролл
+      +icon('scroll', 'scroll__icon')

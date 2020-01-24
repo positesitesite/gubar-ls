@@ -1,0 +1,45 @@
+section.portfolio#portfolio
+  .container 
+
+    .portfolio__title.sub-title Мои работы
+
+    .portfolio__preview-container
+
+      .portfolio__previewed
+        +image('preview-main', 'portfolio__previewed-image')
+
+        //- Create wrapper for further reuse as component
+        ul.portfolio__slider-list
+          li.portfolio__slider-item
+            +image('preview-1', 'portfolio__slider-item-preview')
+          li.portfolio__slider-item
+            +image('preview-2', 'portfolio__slider-item-preview')
+          li.portfolio__slider-item
+            +image('preview-3', 'portfolio__slider-item-preview')
+          li.portfolio__slider-item
+            +image('preview-4', 'portfolio__slider-item-preview')
+
+        //- Slider controls buttons
+        .portfolio__slider-control
+          button(type="button").portfolio__slider-control-next
+            +icon('arrow-next', 'portfolio__slider-control-next-icon')
+          button(type="button").portfolio__slider-control-prev
+            +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
+
+        //- Number indicator
+        .portfolio__slider-control-id 3
+
+              
+      .portfolio__descr              
+        -var tags = ['HTML', 'CSS', 'JavaScript'];
+          ul.portfolio__tags-list
+            each tag in tags
+              li.portfolio__tags-item
+                .portfolio__tags-item-name #{tag}
+          
+
+        h3.portfolio__descr-title.sub-title Сайт школы образования                 
+        .portfolio__descr-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .portfolio__descr-link
+          +icon('link', 'portfolio__descr-link-icon')
+          .portfolio__descr-link-name Посмотреть сайт
