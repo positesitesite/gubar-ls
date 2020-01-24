@@ -18,16 +18,33 @@ section.intro {
 }
 
 .intro__content {
+  max-width: 67%;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.intro__title {
+  transform: translateX(45px);
+  text-align: center;
+
+  @include tablets {
+    width: 100%;
+    margin-bottom: 33%;
+    transform: translateX(0);
+  }
+
+  @include phones {
+    z-index: 10;
+  }
 }
 
 .intro__sub-title {
   position: absolute;
   font-size: 18px;
   color: $grey;
-  left: -40%;
+  left: -29%;
   top: 20px;
   text-align: right;
   z-index: 10;

@@ -13,13 +13,12 @@ section.intro.full-screen#intro
               li.nav__item
                 a.nav__link(href="#") #{item}
 
-      nav.nav__small-screen
+      nav.nav.tablet
         - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-          ul.nav__list
+          ul.nav__list.tablet
             each item in list
-              li.nav__item
-                a.nav__link(href="#") #{item}
-
+              li.nav__item.tablet
+                a.nav__link.tablet(href="#") #{item}
 
       - var socials = ['insta', 'vk', 'github'];
       ul.socials
@@ -27,6 +26,9 @@ section.intro.full-screen#intro
           li.socials__item
             a.socials__item-link(target="_blank" href="#")
               +icon(item, 'socials__item-icon')
+
+      .burger-menu
+        +icon('burger-menu', 'burger-menu__icon')          
 
     .intro__content
       h2.intro__sub-title Личный сайт <br>веб разработчика</br>

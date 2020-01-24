@@ -17,9 +17,17 @@
 
 .scroll__name {
   color: $white;
+
+  @include tablets {
+    color: transparent;
+  }
 }
 
 .scroll__icon {
   height: 30px;
   fill: $white;
+
+  @include tablets {
+    fill: transparent;
+  }
 }

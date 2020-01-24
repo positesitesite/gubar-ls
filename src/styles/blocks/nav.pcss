@@ -1,3 +1,29 @@
+.nav {
+  @include tablets {
+    display: none;
+  }
+
+  &.tablet {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__list.tablet {
+    position: absolute;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__item.tablet {
+    margin-bottom: 20px;
+  }
+}
+
 .nav__list, .footer__nav-list {
   display: flex;
   color: $grey;
@@ -15,13 +41,4 @@
 
 .nav__link:hover, .footer__nav-item:hover {
   color: $white;
-}
-
-// Only tablet and phones
-.nav__small-screen {
-  display: none;
-
-  @include tablets {
-    display: flex;
-  }
 }
