@@ -9,12 +9,15 @@
     content: '';
     position: absolute;
     top: 16%;
-
     width: 34%;
     height: 100%;
     background-image: url('../images/content/skills-hands.png');
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include tablets {
+      display: none;
+    }
   }
 }
 
@@ -25,15 +28,51 @@
   padding-top: 140px;
   padding-left: 28.5%;
   padding-bottom: 148px;
+
+  @include tablets {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    width: 68%;
+  }
 }
 
 .skills__title.sub-title {
   color: $white;
   margin-bottom: 48px;
+
+  @include tablets {
+    text-align: center;
+    width: 58%;
+    margin-bottom: 32px;
+  }
 }
 
 .skills__text {
   padding-bottom: 80px;
   max-width: 650px;
   line-height: 30px;
+
+  @include tablets {
+    text-align: center;
+    width: 58%;
+    padding-bottom: 48px;
+  }
+}
+
+.skills__img-wrapper {
+  display: none;
+  height: 407px;
+
+  @include tablets {
+    display: block;
+    position: relative;
+  }
+}
+
+.skills__img {
+  position: absolute;
+  top: 5.1%;
+  left: 17%;
 }

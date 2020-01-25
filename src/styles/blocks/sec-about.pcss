@@ -1,16 +1,17 @@
 .about {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
 }
 
 .about .container {
-  padding-left: 130px;
   justify-content: center;
-  z-index: 10;
+  z-index: 100;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .about__parallax-grass {
@@ -18,35 +19,50 @@
   top: -38%;
   object-fit: cover;
   z-index: 10;
-
   width: 100%;
 }
 
-.about__parallax-code {
-  position: absolute;
-  top: 0;
+.about__parallax-img {
   object-fit: cover;
-
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  height: 65%;
+  width: 100%;
+  object-position: center;
 }
 
 .about__brief {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 158px;
-  width: 20%;
+  margin-right: 14%;
+  width: 25%;
+
+  @include phones {
+    margin-right: 0;
+    width: 35%;
+    margin-bottom: 30px;
+  }
 }
 
 .about__descr {
-  width: 50%;
+  max-width: 400px;
 }
 
 .about__descr-text.title {
   font-size: 36px;
-  margin: 30px 0 38px 0;
+  margin: 10px 0 25px 0;
+
+  @include phones {
+    margin: 0 0 11px 0;
+  }
 }
 
 .about__descr-text-comment {
-  margin-top: 105px;
+  margin-top: 53px;
+
+  @include phones {
+    margin-top: 16px;
+  }
 }

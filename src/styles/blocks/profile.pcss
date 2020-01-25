@@ -6,12 +6,20 @@
   width: 200px;
   border-radius: 50%;
   margin-bottom: 80px;
+
+  @include phones {
+    margin-bottom: 24px;
+  }
 }
 
 .profile__info-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 22px;
+
+  @include phones {
+    margin-bottom: 8px;
+  }
 }
 
 .profile__info-item-name {
