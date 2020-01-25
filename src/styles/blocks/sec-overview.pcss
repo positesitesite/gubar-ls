@@ -22,14 +22,9 @@ section.overview {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include phones {
+      display: none;
+    }
   }
-}
-
-.contact {
-  margin-bottom: 165px;
-  width: 65%;
-}
-
-.contact-title {
-  color: $white;
 }
