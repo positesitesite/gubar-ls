@@ -2,15 +2,33 @@
   padding-bottom: 206px;
   flex-direction: column;
   align-items: self-start;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .portfolio__title {
   padding-top: 203px;
-  margin-bottom: 92px;
+  padding-bottom: 92px;
+
+  @include tablets {
+    padding-top: 90px;
+    padding-bottom: 48px;
+  }
+
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .portfolio__preview-container {
   display: flex;
+
+  @include custom(998px) {
+    flex-direction: column;
+  }
 }
 
 .portfolio__title.sub-title {
@@ -20,17 +38,47 @@
 .portfolio__descr {
   color: $black;
   margin-left: 157px;
+
+  @include tablets {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    align-items: flex-start;
+    width: 85%; 
+    align-self: center;
+  }
 }
 
 .portfolio__descr-title.sub-title {
   color: $black;
   font-size: 30px;
   margin-bottom: 44px;
-}
 
+  @include tablets {
+    margin-bottom: 11px;  
+  }
+
+  @include phones {
+    width: 80%; 
+  }
+}
 .portfolio__descr-text {
   margin-bottom: 50px;
   line-height: 30px;
+
+  @include tablets {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    text-align: left;
+  }
 }
 
 .portfolio__descr-link {
@@ -57,4 +105,7 @@
 .portfolio__descr-link-name {
   color: #586ed3;
   font-weight: 700;
+}
+
+@include tablets {
 }

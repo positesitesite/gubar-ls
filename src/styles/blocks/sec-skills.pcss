@@ -8,12 +8,17 @@
   &:after {
     content: '';
     position: absolute;
-    top: 16%;
+    top: 78%;
     width: 34%;
     height: 100%;
+    transform: translateY(-50%);
     background-image: url('../images/content/skills-hands.png');
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include custom(1378px) {
+      top: 100%;
+    }
 
     @include tablets {
       display: none;
@@ -34,7 +39,10 @@
     padding-top: 0;
     padding-bottom: 0;
     align-items: center;
-    width: 68%;
+  }
+
+  @include phones {
+    max-width: 400px;
   }
 }
 
@@ -44,8 +52,14 @@
 
   @include tablets {
     text-align: center;
-    width: 58%;
+    // width: 58%;
+    max-width: 58%;
     margin-bottom: 32px;
+  }
+
+  @include phones {
+    text-align: left;
+    max-width: 100%;
   }
 }
 
@@ -56,8 +70,13 @@
 
   @include tablets {
     text-align: center;
-    width: 58%;
+    max-width: 58%;
     padding-bottom: 48px;
+  }
+
+  @include phones {
+    text-align: left;
+    max-width: 100%;
   }
 }
 
@@ -69,10 +88,20 @@
     display: block;
     position: relative;
   }
+
+  @include phones {
+    height: 200px;
+  }
 }
 
 .skills__img {
   position: absolute;
   top: 5.1%;
   left: 17%;
+
+  @include phones {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

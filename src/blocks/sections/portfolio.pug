@@ -22,12 +22,12 @@ section.portfolio#portfolio
         //- Slider controls buttons
         .portfolio__slider-control
           button(type="button").portfolio__slider-control-next
+            .portfolio__slider-control-id 2
             +icon('arrow-next', 'portfolio__slider-control-next-icon')
           button(type="button").portfolio__slider-control-prev
             +icon('arrow-prev', 'portfolio__slider-control-prev-icon')
 
-        //- Number indicator
-        .portfolio__slider-control-id 3
+          
 
               
       .portfolio__descr              
@@ -37,7 +37,6 @@ section.portfolio#portfolio
               li.portfolio__tags-item
                 .portfolio__tags-item-name #{tag}
           
-
         h3.portfolio__descr-title.sub-title Сайт школы образования                 
         .portfolio__descr-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
         a.portfolio__descr-link
