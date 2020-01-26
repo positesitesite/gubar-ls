@@ -4,10 +4,22 @@ section.intro {
   align-items: center;
 
   width: 100%;
-  background-image: url('../images/content/intro-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.intro__bg {
+  position: absolute;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+
+  &.sky {
+    top: 0;
+  }
+
+  &.mountains {
+    top: 30%;
+  }
 }
 
 .intro .container {

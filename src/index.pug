@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -16,11 +16,16 @@ html(lang="en")
         include ./blocks/sections/intro
 
         include ./blocks/sections/about
-        
-      include ./blocks/sections/skills
+
+      #skills-component
       
       include ./blocks/sections/portfolio
 
       include ./blocks/sections/overview
 
-      include ./blocks/sections/end 
+      include ./blocks/sections/end
+
+    script(src="main.js" type="text/javascript")
+
+    include ./templates/entry.pug
+    

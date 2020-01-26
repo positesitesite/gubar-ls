@@ -1,0 +1,39 @@
+script(type="text/x-template")#skills
+
+  section.skills
+    .container
+
+      h3.skills__title.sub-title Чем я могу быть полезен вам
+      .skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          
+      .skills__block
+
+        //- Row with Front-end skills
+        .skills__line Front-end
+        - var skills = ['HTML', 'CSS3', 'JavaScript', 'Jquery и Vue.js'];
+          ul.skills__list
+            each skill in skills
+              li.skills__item
+                svg(viewBox="0 0 200 200").skills__progress 
+                  circle(cx="100" cy="100" r="80").skills__progress-circle
+                  circle(cx="100" cy="100" r="80").skills__progress-circle-id
+                .skills__name #{skill}
+
+        //- Row with Workflow skills
+        .skills__line Workflow
+        - var skills = ['GIT', 'Terminal', 'Gulp', 'Webpack'];
+          ul.skills__list
+            each skill in skills
+              li.skills__item
+                svg(viewBox="0 0 200 200").skills__progress 
+                  circle(cx="100" cy="100" r="80").skills__progress-circle
+                  circle(cx="100" cy="100" r="80").skills__progress-circle-id
+                .skills__name #{skill}
+
+                //- Gradient
+                svg(style="width:0; height:0; position: absolute;" aria-hidden="true").skills__progress-gradient
+                  linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                    stop(offset="0%" stop-color='#d0731b')
+                    stop(offset="100%" stop-color='#dc9322') 
+        .skills__img-wrapper
+          +image('skills-hands-270deg', 'skills__img')
