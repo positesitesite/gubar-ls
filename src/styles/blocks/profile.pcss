@@ -1,0 +1,45 @@
+.profile__info {
+  position: relative;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.profile__img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 80px;
+
+  @include phones {
+    margin-bottom: 24px;
+  }
+}
+
+.profile__info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+
+  @include phones {
+    margin-bottom: 8px;
+  }
+}
+
+.profile__info-item-name {
+  margin-right: 103px;
+
+  // Fixing margin-right bug
+  @include tablets {
+    margin-right: 40px;
+  }
+
+  @include phones {
+    margin-right: 103px;
+  }
+}
+
+.profile__info-item-content {
+  color: $white;
+  white-space: nowrap;
+}

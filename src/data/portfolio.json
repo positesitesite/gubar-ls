@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "SPA сайт визитка",
+    "skills": "HTML, CSS, Vanilla JS, Vue.js",
+    "photo": "preview-1.png",
+    "link": "//google.com",
+    "descr": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+  },
+  {
+    "id": 2,
+    "title": "Landing page - Mr. Burger",
+    "skills": "HTML, CSS, Vanilla JS, jQuery",
+    "photo": "preview-2.png",
+    "link": "//google.com",
+    "descr": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+  },
+  {
+    "id": 3,
+    "title": "Многостраничный сайт - Coworking",
+    "skills": "HTML, CSS",
+    "photo": "preview-3.png",
+    "link": "//google.com",
+    "descr": "Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!"
+  }
+]

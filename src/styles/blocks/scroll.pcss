@@ -1,4 +1,32 @@
 .scroll {
+  z-index: 100;
+  display: flex;
+  align-items: center;
   background-color: transparent;
+
+  &:hover {
+    .scroll__name {
+      color: $grey;
+    }
+    .scroll__icon {
+      fill: $grey;
+    }
+  }
 }
 
+.scroll__name {
+  color: $white;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.scroll__icon {
+  height: 30px;
+  fill: $white;
+
+  @include tablets {
+    display: none;
+  }
+}

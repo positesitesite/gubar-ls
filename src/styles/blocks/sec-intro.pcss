@@ -1,0 +1,80 @@
+section.intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.intro__bg {
+  position: absolute;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+
+  &.sky {
+    top: 0;
+  }
+
+  &.mountains {
+    top: 30%;
+  }
+}
+
+.intro .container {
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 90%;
+}
+
+.intro__content {
+  max-width: 67%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__title {
+  transform: translateX(45px);
+  text-align: center;
+
+  @include tablets {
+    width: 100%;
+    margin-bottom: 33%;
+    transform: translateX(0);
+  }
+
+  @include phones {
+    z-index: 10;
+  }
+}
+
+.intro__sub-title {
+  position: absolute;
+  font-size: 18px;
+  color: $grey;
+  left: -29%;
+  top: 20px;
+  text-align: right;
+  z-index: 10;
+
+  @include tablets {
+    position: static;
+    text-align: center;
+  }
+}
+
+.intro__parallax-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  top: 42%;
+
+  position: absolute;
+  z-index: 10;
+}
+

@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,215 +11,21 @@ html(lang="en")
   body
     .wrapper
 
-      .main-content
+      main.main-content
 
-        section.intro
-          .container
+        include ./blocks/sections/intro
 
-            header.header
-              .logo АГ
+        include ./blocks/sections/about
 
-              nav.nav
-                ul.nav__list
-                - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-                  each item in list
-                  li.nav__item
-                    a.nav__link #{item}
+      #skills
+      
+      #portfolio
 
-              ul.socials
-                li.socials__item
-                li.socials__item                
-                li.socials__item                
+      include ./blocks/sections/overview
 
-            .intro__content            
-              h2.intro__sub-title.sub-title Личный сайт веб разработчика
-              h1.intro__title.title Артур Губарь
+      include ./blocks/sections/end
 
-            button.scroll
-              span.scroll__name Скролл
-              +icon('scroll', 'scroll__icon')
+    script(src="main.js" type="text/javascript")
 
-        section.about
-          .container
-
-            .about__brief
-              img.about__img
-              ul.about__info
-                li.about__info-item
-                  .about__info-item-name Проживаю
-                  .about__info-item-content Бангкок
-                li.about__info-item
-                  .about__info-item-name Возраст
-                  .about__info-item-content 24 года
-                li.about__info-item
-                  .about__info-item-name Родился
-                  .about__info-item-content 19 мая 1995
-
-            .about__descr
-              p.about__descr-text Привет, меня зовут
-              h2.about__descr-text.title Артур Губарь
-              p.about__descr-text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              p.about__descr-text-comment Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
-      section.skills
-        .container
-
-          h3.skills__title.sub-title Чем я могу быть полезен вам
-          .skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-          
-          .skills__block
-
-            .skills__line Front-end
-            ul.skills__list
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name HTML5
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name CSS3
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name Javascript
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name Jquery и Vue.js
-
-            .skills__line Workflow
-            ul.skills__list
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name GIT
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name Terminal
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name Gulp
-              li.skills__item
-                svg.skills__progress
-                svg.skills__progress-id
-                .skills__name Webpack
-
-      section.portfolio
-        .container 
-
-          .portfolio__title
-
-          .portfolio__preview-container
-
-            .portfolio__previewed
-              img.portfolio__previewed-image
-              ul.portfolio__slider-list
-                li.portfolio__slider-item
-                li.portfolio__slider-item
-                li.portfolio__slider-item
-                li.portfolio__slider-item
-
-                li.portfolio__slider-control
-                  .portfolio__slider-control-next
-                    svg
-                  .portfolio__slider-control-prev
-                    svg
-                    
-            .portfolio__descr              
-              ul.portfolio__tags-list
-                li.portfolio__tags-item
-                  .portfolio__tags-item-container
-                  .portfolio__tags-item-name HTML
-                li.portfolio__tags-item
-                  .portfolio__tags-item-container
-                  .portfolio__tags-item-name CSS
-                li.portfolio__tags-item
-                  .portfolio__tags-item-container
-                  .portfolio__tags-item-name Javascript
-
-              h3.portfolio__descr-title Сайт школы образования                 
-              .portfolio__descr-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              .portfolio__descr-link
-                .portfolio__descr-link-icon
-                .portfolio__descr-link-name Посмотреть сайт
-
-      section.overview
-
-        .container
-
-          .overview__comments
-
-            .overview__comments-blockline
-              .overview__comments-title Что обо мне говорят
-              .overview__comments-control
-                .overview__comments-control-prev
-                  svg
-                .overview__comments-control-next
-                  svg
-
-            .overview__comments-blockline
-              .overview__comments-container
-                .overview__comments-text
-                .overview__comments-person
-                  .overview__comments-person-img-wrapper
-                    .overview__comments-person-img
-                  .overview__comments-person-info                    
-                    .overview__comments-person-name
-                    .overview__comments-person-occup
-              .overview__comments-container
-                .overview__comments-text
-                .overview__comments-person
-                  .overview__comments-person-img-wrapper
-                    .overview__comments-person-img
-                  .overview__comments-person-info                    
-                    .overview__comments-person-name
-                    .overview__comments-person-occup
-
-          .overview__contact
-            h2.overview__contact-title.sub-title
-            form.overview__contact-form
-              .form__row
-                label.form__item
-                  .form__hint Введите ваше имя
-                  input.form__input(value="Jonatan Soderstrom") 
-                label.form__item
-                  .form__hint Введите вашу почту
-                  input.form__input(value="hotline@miami.com") 
-              .form__row
-                label.form__item
-                  .form__hint Сообщение к письму
-                  input.form__input(value="Привет Артур")
-              button.form__send-button
-                .form__send-button-text Отправить
-
-      section.end
-          footer.footer
-            .container
-
-              .footer__column
-                .footer__title Артур Губарь
-                .footer__sub-title Личный сайт веб-разработчика
-
-              .footer__column
-
-                .footer__row
-                  ul.footer__nav
-                    li.footer__nav-item Главная
-                    li.footer__nav-item Обо мне
-                    li.footer__nav-item Навыки
-                    li.footer__nav-item Работы
-                    li.footer__nav-item Отзывы
-                    li.footer__nav-item Связаться
-                .footer__row
-                  .footer__row-container
-                    .footer__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                    ul.footer__socials
-                      li.footer__socials-icon 
-                      li.footer__socials-icon
-                      li.footer__socials-icon
-                  .footer__row-container
-                    .footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-                    .footer__quote-author Martin Golding
+    include ./templates/entry.pug
+    

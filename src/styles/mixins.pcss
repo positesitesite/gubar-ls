@@ -1,6 +1,7 @@
 $white: #ffffff;
-$orange: #393939;
-$darkgrey: rgba(#ffffff, .15);
+$black: #333c49;;
+$orange: #da8433;
+$lightgrey: rgba(#ffffff, .15);
 $grey: rgba(#ffffff, .5);
 
 @mixin desktopHd() {
@@ -27,3 +28,8 @@ $grey: rgba(#ffffff, .5);
   }
 }
 
+@mixin custom($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

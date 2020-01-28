@@ -1,0 +1,31 @@
+.socials {
+  display: flex;
+  white-space: nowrap;
+
+  @include tablets {
+    margin-left: 40%;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.socials__item {
+  margin-right: 40px;
+  
+  &-icon {
+    fill: $grey;
+    width: 25px;
+    min-height: 100%;
+
+    &:hover {
+      fill: $white;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+

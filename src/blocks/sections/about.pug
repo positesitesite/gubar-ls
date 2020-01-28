@@ -1,0 +1,25 @@
+section.about#about
+
+  +image('about-bg', 'about__parallax-img grass')
+  .container
+
+    .about__brief
+      +image('me', 'profile__img', 'Фото профиля')
+
+      ul.profile__info
+        - 
+          var items = [
+            ['Проживаю', 'Бангкок'],
+            ['Возраст', '24 года'],
+            ['Родился', '19 мая 1995'],
+          ]
+        each item in items
+          li.profile__info-item
+            .profile__info-item-name #{item[0]}
+            .profile__info-item-content #{item[1]}
+
+    .about__descr
+      p.about__descr-text Привет, меня зовут
+      h2.about__descr-text.title Артур Губарь
+      p.about__descr-text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      p.about__descr-text-comment Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!

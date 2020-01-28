@@ -1,0 +1,35 @@
+script(type="text/x-template")#skills-section
+  section.skills
+    .container
+      h3.skills__title.sub-title Чем я могу быть полезен вам
+      .skills__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      skills-block
+          
+script(type="text/x-template")#skills-block
+  .skills__block
+    .skills__row(v-for="skill in skills")    
+      .skills__line {{skill.skillsGroup}}
+      .skills__list-container    
+        skills-item(
+          :skill="skill"
+        )
+
+script(type="text/x-template")#skills-item
+  ul.skills__list
+    li.skills__item(v-for="(skillPercent, skillName) in skill.skills")
+      skills-circle(
+        :skillPercent="skillPercent"
+      )
+      .skills__name {{skillName}}
+
+script(type="text/x-template")#skills-circle
+  svg(viewBox="0 0 200 200").skills__progress 
+    circle(cx="100" cy="100" r="80").skills__progress-circle
+    circle(cx="100" cy="100" r="80" ref="circle-id").skills__progress-circle-id
+    linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0").skills__progress-gradient
+      stop(offset="0%" stop-color='#d0731b')
+      stop(offset="100%" stop-color='#dc9322') 
+
+script(type="text/x-template")#skills-mobileimg
+  .skills__img-wrapper
+    +image('skills-hands-270deg', 'skills__img')

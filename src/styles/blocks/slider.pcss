@@ -1,0 +1,119 @@
+// Slider container
+.portfolio__previewed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 975px;
+
+  @include custom(998px) {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+// Slider in portfolio section
+.portfolio__ {
+
+  // Main image
+  &previewed-image {
+    width: 100%;
+  }
+
+  // UL list
+  &slider-list {
+    position: absolute;
+    display: flex;
+    width: 85%;
+    height: 22%;
+    transform: translateX(-100%);
+    top: 63%;
+    left: 100%;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  // Li item container
+  &slider-item {
+    width: 100%;
+
+    &:hover {
+      border: $orange 4px solid;
+    }
+  }
+
+  // LI image inside of container
+  &slider-item-preview {
+    width: 100%;
+    height: 100%;
+  }
+
+  // Controls
+  &slider-control {
+    height: 22%;
+    width: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 63%;
+    left: 100%;
+
+    @include phones {
+      top: 50%;
+      left: 86%;
+      height: 50%;
+      width: 14%;
+    }
+    
+    // Control buttons styles
+    &-next, &-prev {
+      width: 100%;
+      height: 100%;
+      background-color: #353e4e;
+
+      &:hover {
+        background-color: #465266;
+      }
+
+      &-icon {
+        width: 8px;
+        fill: $white;
+      }
+    }
+  } // End of porfolio block
+}
+
+// Relative element for Identification number
+.portfolio__slider-control-next {
+  position: relative;
+}
+
+// Identification number
+.portfolio__slider-control-id {
+  position: absolute;
+  left: -180%;
+  top: 0;
+  transform: translateY(-83%);
+  z-index: -1;
+  color: #e6e6e6;
+  font-size: 400px;
+  font-weight: 800;
+
+  @include desktop {
+    font-size: 300px;
+  }
+
+  @include custom(998px) {
+    left: -73%;
+  }
+
+  @include phones {
+    display: none;
+  }
+}

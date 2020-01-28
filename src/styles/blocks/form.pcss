@@ -1,0 +1,117 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 45px;
+
+  @include custom(666px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+}
+
+.form__item {
+  position: relative;
+  margin-right: 100px;
+  width: 100%;
+
+  @include custom(666px) {
+    margin-bottom: 35px;
+  }
+
+  &.message {
+    @include custom(666px) {
+      margin-right: 0;
+    }
+  }
+}
+
+// Inputs and text area
+.form__input {
+  width: 100%;
+  padding: 16px;
+  color: $white;
+  font-weight: 700;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid rgba($white, 0.5);
+
+  &:focus {
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid rgba($orange, 0.5);
+  }
+
+  &::placeholder {
+    @include phones {
+      font-size: 14px;
+    }
+  }
+}
+
+.form__user-icon {
+  &:after {
+    position: absolute;
+    left: -16px;
+    top: 39px;
+    content: '';
+    display: block;
+    width: 26px;
+    height: 30px;
+    background: svg-load('user.svg', fill=rgba($white, .3), width=100%, height=100%);
+    background-repeat: no-repeat;
+  }
+}
+
+.form__mail-icon {
+  &:after {
+    position: absolute;
+    left: -16px;
+    top: 39px;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 23px;
+    background: svg-load('mail.svg', fill=rgba($white, .3), width=100%, height=100%);
+    background-repeat: no-repeat;
+  }
+}
+
+.form__msg-icon {
+  &:after {
+    position: absolute;
+    left: -16px;
+    top: 39px;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: svg-load('msg.svg', fill=rgba($white, .1), width=100%, height=100%);
+    background-repeat: no-repeat;
+  }
+}
+
+.form__send-button {
+  margin-top: 30px;
+  padding: 32px 128px;
+  background: $orange;
+  color: $white;
+  font-weight: 700;
+  max-width: 347px;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background: rgb(#e99a50);
+  }
+
+  @include tablets {
+    width: 60%;
+    align-self: center;
+  }
+}

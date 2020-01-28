@@ -1,0 +1,92 @@
+.skills__title {
+  @include phones {
+    margin-top: 34px;
+  }
+}
+
+.skills__block {
+  padding-left: 135px;
+
+  @include tablets {
+    padding-left: 0;
+  }
+}
+
+.skills__line {
+  margin-bottom: 39px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $white;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    margin-bottom: 11px;
+  }
+}
+
+.skills__list {
+  padding-bottom: 48px;
+  text-align: center;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.skills__item {
+  margin-right: 20px;
+  position: relative;
+  display: inline-block;
+  
+  &:last-child{
+    margin-right: 0;
+  }
+
+  // Fix margin bug on 530px-320px resolution
+  @include custom(530px) {
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  @include phones {
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.skills__progress {
+  position: relative;
+
+  width: 134px;
+  fill: transparent;
+}
+
+.skills__progress-circle {
+  fill: transparent;
+  stroke: #e9e9e9;
+  stroke-width: 10PX;
+}
+
+.skills__progress-circle-id {
+  stroke-dasharray: 502;
+  stroke-dashoffset: 0;
+  stroke-width: 20PX;
+  stroke: url(#gradient);
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+}
+
+.skills__name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
