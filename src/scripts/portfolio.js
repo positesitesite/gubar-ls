@@ -25,7 +25,7 @@ const preview = {
       console.log(direction)
     }
   },
-  props: ['portfolio', 'currentWork', 'tags']
+  props: ['portfolio', 'currentWork', 'tags', 'work']
 };
 
 new Vue({
@@ -64,6 +64,10 @@ new Vue({
           this.currentIndex--;
           break;
       }
+    },
+    handleItem(ndx) {
+      this.currentIndex = ndx - 1;
+      console.log(ndx)
     },
     makeInfiniteLoopForIndex(value) {
       const worksAmountComputerCounted = this.portfolio.length - 1;

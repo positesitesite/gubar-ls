@@ -7,6 +7,7 @@ script(type="text/x-template")#portfolio-section
         :currentWork="currentWork"
         :tags="tags"
         @slide="handleSlide"
+        @itemClicked="handleItem"
       )
 
 script(type="text/x-template")#slider-preview
@@ -14,6 +15,7 @@ script(type="text/x-template")#slider-preview
     .portfolio__previewed
       img(:src="currentWork.photo" alt="" class="portfolio__previewed-image") 
       list(
+        @itemClicked="$emit('itemClicked', $event)"
         :portfolio="portfolio"
         :currentWork="currentWork"
       )
@@ -31,6 +33,7 @@ script(type="text/x-template")#slider-list
   ul.portfolio__slider-list
     li.portfolio__slider-item(
       v-for="work in portfolio"
+      @click="$emit('itemClicked', work.id)"
       :class="{active: work.id === currentWork.id}"
       )
       a.portfolio__slider-item-wrapper
