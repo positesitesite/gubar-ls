@@ -37,13 +37,15 @@ new Vue({
   data() {
     return { 
       portfolio: [],
-      tags: [],
       currentIndex: 0
     }
   },
   computed: {
     currentWork() {
       return this.portfolio[this.currentIndex]
+    },
+    tags() {
+      return this.portfolio[this.currentIndex].skills.split(', ');
     }
   },
   methods: {
@@ -67,7 +69,6 @@ new Vue({
     },
     handleItem(ndx) {
       this.currentIndex = ndx - 1;
-      console.log(ndx)
     },
     makeInfiniteLoopForIndex(value) {
       const worksAmountComputerCounted = this.portfolio.length - 1;
@@ -84,6 +85,7 @@ new Vue({
   created() {
     const data = require('../data/portfolio.json');
     this.portfolio = this.makeArrWithRequiredImages(data);
-    this.tags = this.currentWork.skills.split(', ');
+    this.tags = this.portfolio[this.currentIndex].skills.split(', ');
+    // this.tags = this.currentWork.skills.split(', ');
   }
 });
