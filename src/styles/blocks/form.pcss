@@ -1,12 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__row {
   display: flex;
   margin-bottom: 45px;
+
+  @include custom(666px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
 }
 
 .form__item {
   position: relative;
   margin-right: 100px;
   width: 100%;
+
+  @include custom(666px) {
+    margin-bottom: 35px;
+  }
+
+  &.message {
+    @include custom(666px) {
+      margin-right: 0;
+    }
+  }
 }
 
 // Inputs and text area
@@ -23,6 +45,12 @@
     outline: none;
     border: transparent;
     border-bottom: 1px solid rgba($orange, 0.5);
+  }
+
+  &::placeholder {
+    @include phones {
+      font-size: 14px;
+    }
   }
 }
 
@@ -69,13 +97,21 @@
 }
 
 .form__send-button {
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 32px 128px;
   background: $orange;
   color: $white;
   font-weight: 700;
+  max-width: 347px;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background: rgb(#e99a50);
+  }
+
+  @include tablets {
+    width: 60%;
+    align-self: center;
   }
 }

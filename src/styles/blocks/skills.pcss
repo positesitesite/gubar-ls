@@ -1,3 +1,9 @@
+.skills__title {
+  @include phones {
+    margin-top: 34px;
+  }
+}
+
 .skills__block {
   padding-left: 135px;
 
@@ -15,10 +21,15 @@
   @include tablets {
     text-align: center;
   }
+
+  @include phones {
+    margin-bottom: 11px;
+  }
 }
 
 .skills__list {
   padding-bottom: 48px;
+  text-align: center;
 
   &:last-child {
     padding-bottom: 0;
@@ -32,6 +43,22 @@
   
   &:last-child{
     margin-right: 0;
+  }
+
+  // Fix margin bug on 530px-320px resolution
+  @include custom(530px) {
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  @include phones {
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -49,7 +76,8 @@
 }
 
 .skills__progress-circle-id {
-  stroke-dasharray: 180;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 0;
   stroke-width: 20PX;
   stroke: url(#gradient);
   transform: rotate(180deg);

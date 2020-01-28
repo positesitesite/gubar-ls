@@ -1,10 +1,12 @@
-section.intro.full-screen#intro
-
-  +image('train', 'intro__parallax-img')
+section.intro.full-screen
+  +image('sky', 'intro__bg sky')
+  +image('mountains', 'intro__bg mountains')
+  +image('train', 'intro__parallax-img train')
   .container
 
     header.header
-      .logo.title АГ
+      a.home-link(href="https://github.com/positesitesite" alt="Ссылка на гитхаб")
+        +icon('portofolio-logo', 'logo')
 
       nav.nav
         - var list = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
@@ -21,11 +23,11 @@ section.intro.full-screen#intro
                 a.nav__link.tablet(href="#") #{item}
 
       - var socials = ['insta', 'vk', 'github'];
-      ul.socials
-        each item in socials
-          li.socials__item
-            a.socials__item-link(target="_blank" href="#")
-              +icon(item, 'socials__item-icon')
+        ul.socials
+          each item in socials
+            li.socials__item
+              a.socials__item-link(target="_blank" href="#")
+                +icon(item, 'socials__item-icon')
 
       .burger-menu
         +icon('burger-menu', 'burger-menu__icon')          

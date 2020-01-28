@@ -1,5 +1,9 @@
 .profile__info {
   position: relative;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
 }
 
 .profile__img {
@@ -24,6 +28,15 @@
 
 .profile__info-item-name {
   margin-right: 103px;
+
+  // Fixing margin-right bug
+  @include tablets {
+    margin-right: 40px;
+  }
+
+  @include phones {
+    margin-right: 103px;
+  }
 }
 
 .profile__info-item-content {

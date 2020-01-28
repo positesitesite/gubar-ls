@@ -2,11 +2,34 @@
   align-items: flex-start;
   padding-top: 80px;
   padding-left: 220px;
+
+  @include custom(1350px) {
+    padding-left: 0;
+  }
+
+  @include tablets {
+    padding-left: 0;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__column {
   position: relative;
-  margin-right: 140px;
+
+  &:nth-child(1) {
+    margin-right: 140px;
+
+    @include custom(1350px) {
+      margin-top: 66px;
+    }
+  }
+
+  @include tablets {
+    margin-right: 3.75rem;
+  }
 }
 
 // © 2019
@@ -18,27 +41,55 @@
   position: absolute;
   left: -218px;
   top: -10px;
+
+  @include custom(1350px) {
+    left: -0.425rem;
+    top: -4.925rem;
+  }
 }
 
 .footer__row {
   display: flex;
   margin-bottom: 60px;
+
+  @include tablets {
+    flex-direction: column;
+    margin-bottom: 44px;
+  }
 }
 
 .footer__descr {
   min-width: 142px;
   margin-bottom: 34px;
+  margin-right: 40px;
+
+  @include tablets {
+    margin-bottom: 15px;
+  }
+
+  @include phones {
+    margin-bottom: 36px;
+  }
 }
 
 .footer__title.sub-title {
+  width: 176px;
   color: $white;
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 34px;
+
+  @include phones {
+    margin-bottom: 12px;
+  }
 }
 
 .footer__socials {
   display: flex;
+
+  @include tablets {
+    margin-bottom: 46px;
+  }
 }
 
 .footer__socials__item {
