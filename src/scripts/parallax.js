@@ -12,6 +12,4 @@ window.onscroll = () => {
     train.style.transform = `translate3d(0, ${-(yOffset / 50) + '%'}, 0)`;
     grass.style.transform = `translate3d(0, ${-(yOffset / 25) + '%'}, 0)`;
   }
-
-  console.log(yOffset);
 }

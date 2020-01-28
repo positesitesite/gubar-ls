@@ -91,6 +91,10 @@ p {
 
 button[type="button"] {
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 a {
@@ -118,4 +122,8 @@ img {
   font-size: 36px;
   font-weight: 800;
   color: $grey;
+}
+
+li.active {
+  filter: brightness(.3);
 }
