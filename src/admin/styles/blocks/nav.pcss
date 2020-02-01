@@ -1,0 +1,33 @@
+.nav {
+  background-color: #ffffff;
+}
+
+.nav__switcher-container {
+  margin-left: 80px;
+  display: flex;
+}
+
+.nav__switcher-item-wrapper {
+  border: 3px transparent solid;
+  outline: none;
+  width: 125px;
+  text-align: center;
+
+  &:focus {
+    .nav__switcher-item {
+      font-weight: 700;
+      color: $orange;
+    }
+
+    border-bottom: 3px $orange solid;
+    border-top: 3px transparent solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+  }
+}
+
+.nav__switcher-item {
+  display: inline-block;
+  padding: 22px 0;
+  color: $darkgrey;
+}

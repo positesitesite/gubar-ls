@@ -1,5 +1,27 @@
-* {
-  font-family: 'Open-sans', sans-serif;
+html {
+  @include desktop {
+    font-size: 15px;
+  }
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
 }
 
 .wrapper.admin-wrapper {
@@ -13,4 +35,89 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
+}
+
+input {
+  padding: 10px;
+  padding-left: 0;
+  border: 3px transparent solid;
+  border-bottom: 3px $darkgrey solid;
+  outline: none;
+
+  &:focus {
+    border-bottom: 3px $black solid;
+    border-top: 3px transparent solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+  }
+}
+
+::placeholder {
+  color: $darkgrey;
+  font-size: 18px;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  color: $white;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: $black;
+  line-height: 30px;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+
+.title {
+  color: $black;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sub-title {
+  color: $black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.descr-title {
+  color: $grey;
+  font-size: 13px;
+  font-weight: 400;
 }

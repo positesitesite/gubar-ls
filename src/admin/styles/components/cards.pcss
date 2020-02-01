@@ -1,0 +1,19 @@
+ul.cards {
+  width: 100%;
+  display: flex;
+}
+
+li.cards__item, li.cards__item--add{
+  display: grid;
+  min-height: 400px;
+  grid-template-rows: 16% 74% 10%;
+  position: relative;
+  width: 50%;
+  background-color: $white;
+  padding: 20px;
+
+  &:nth-child(odd) {
+    margin-right: 32px;
+  }
+}
+

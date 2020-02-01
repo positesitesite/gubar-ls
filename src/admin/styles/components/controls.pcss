@@ -1,0 +1,35 @@
+.controls {
+  display: flex;
+}
+
+.controls__default-state {
+  display: none;
+  overflow: hidden;
+  &.active {
+    display: block;
+  }
+}
+
+.controls__editing-state {
+  display: none;
+  overflow: hidden;
+
+  &.active {
+    display: block;
+  }
+}
+
+.controls__edit-icon, .controls__delete-icon, .controls__apply-icon, .controls__cancel-icon {
+  width: 21px;
+  height: 21px;
+  fill: $darkgrey;
+}
+
+.controls__apply-icon {
+  fill: rgb(63, 196, 91)
+}
+
+.controls__cancel-icon {
+  fill: rgb(218, 58, 58)
+}
+
