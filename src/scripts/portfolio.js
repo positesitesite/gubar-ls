@@ -85,7 +85,5 @@ new Vue({
   created() {
     const data = require('../data/portfolio.json');
     this.portfolio = this.makeArrWithRequiredImages(data);
-    this.tags = this.portfolio[this.currentIndex].skills.split(', ');
-    // this.tags = this.currentWork.skills.split(', ');
   }
 });

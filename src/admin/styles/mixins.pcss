@@ -1,0 +1,35 @@
+$white: #ffffff;
+$black: #333c49;;
+$orange: #da8433;
+$lightgrey: rgba(#ffffff, .15);
+$grey: rgba(#ffffff, .5);
+
+@mixin desktopHd() {
+  @media screen and (max-width: $bp-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+@mixin custom($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
