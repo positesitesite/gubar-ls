@@ -8,7 +8,7 @@
         svg(viewBox="0 0 21 22").controls__delete-icon
           <path fill-rule="evenodd" clip-rule="evenodd" d="M5.86275 0.684204H14.6627V1.46194H20.2627V3.79527H0.262695V1.46194H5.86275V0.684204ZM17.0629 5.35085H3.46289V21.6842H17.0629V5.35085Z"/>
     .controls__editing-state
-      button(type='button').controls__apply                  
+      button(type='button').controls__apply
         svg(viewBox="0 0 21 17").controls__apply-icon
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9998 2.66824L18.2988 0.0526123L7.29803 10.7057L2.70101 6.25397L0 8.86959L7.41746 16.0526L10.1185 13.437L9.99904 13.3213L20.9998 2.66824Z"/>
       button(type='button').controls__cancel                
@@ -17,7 +17,43 @@
 </template>
 
 <style lang="postcss" scoped>
+
 button {
   border: none;
+}
+
+.controls {
+  display: flex;
+}
+
+.controls__default-state {
+  display: none;
+  overflow: hidden;
+  &.active {
+    display: block;
+  }
+}
+
+.controls__editing-state {
+  display: none;
+  overflow: hidden;
+
+  &.active {
+    display: block;
+  }
+}
+
+.controls__edit-icon, .controls__delete-icon, .controls__apply-icon, .controls__cancel-icon {
+  width: 21px;
+  height: 21px;
+  fill: rgb(133, 133, 133);
+}
+
+.controls__apply-icon {
+  fill: rgb(63, 196, 91)
+}
+
+.controls__cancel-icon {
+  fill: rgb(218, 58, 58)
 }
 </style>

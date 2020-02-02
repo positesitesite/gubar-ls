@@ -16,3 +16,14 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+li.items__skill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items__skill-progress {
+  margin-left: 27%;
+}
+</style>
