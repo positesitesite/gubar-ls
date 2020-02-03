@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import Controls from '../Controls'; 
-import Items from '../Items'; 
+import Controls from 'components/Controls';
+import Items from 'components/Items';
 export default {
   components: {
     Controls,

@@ -1,30 +1,22 @@
-<style lang="postcss">
-  @import './styles/main.pcss';
-</style>
-
 <template lang='pug'>
   .wrapper.admin-wrapper
+    
     AppHeader
 
-    AppNav(text)
+    AppNav
 
-    //- AboutMe
+    router-view
 
-    Works
 </template>
 
 <script>
-import AppHeader from 'components/AppHeader';
-import AppNav from 'components/AppNav';
-import AboutMe from 'components/MainContent/AboutMe';
-import Works from 'components/MainContent/Works';
+import AppHeader from 'blocks/AppHeader';
+import AppNav from 'blocks/AppNav';
 
 export default {
   components: {
     AppHeader,
-    AppNav,
-    AboutMe,
-    Works
+    AppNav
   },
   mounted() {
     console.log(this._uid);
@@ -32,5 +24,7 @@ export default {
 }
 </script>
 
-
+<style lang="postcss">
+  @import './styles/main.pcss';
+</style>
 
