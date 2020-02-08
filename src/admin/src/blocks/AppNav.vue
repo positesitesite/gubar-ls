@@ -1,8 +1,8 @@
 <template lang="pug">
   nav.nav
     .nav__switcher-container
-      button(type='button' v-for='item in navItems' :id='theId').nav__switcher-item-wrapper
-        router-link(:to='item.link').nav__switcher-item {{item.name}}
+      button(type="button" v-for="(item, index) in navItems" :key="index" :id=" 'switcher-item' + index").nav__switcher-item-wrapper
+        router-link(:to="item.link").nav__switcher-item {{item.name}}
 </template>
 
 <script>
@@ -14,23 +14,23 @@ export default {
     return {
       navItems: [
         {
-          name: 'Обо мне',
-          link: '/'
+          name: "Обо мне",
+          link: "/"
         },
         {
-          name: 'Работы',
-          link: '/Works'
+          name: "Работы",
+          link: "/Works"
         },
         {
-          name: 'Отзывы',
-          link: '/Reviews'
+          name: "Отзывы",
+          link: "/Reviews"
         }
       ]
     }
   },
   computed: {
     theId() {
-      return 'textany' + this._uid;
+      return "textany" + this._uid;
     }
   },
   mounted() {
@@ -42,10 +42,10 @@ export default {
 
 
 <style lang="postcss" scoped>
-@import '../../styles/mixins';
+@import "../../../styles/mixins";
 
 nav.nav {
-  background-color: $grey;
+  background-color: $black;
 }
 
 .nav__switcher-container {

@@ -9,13 +9,15 @@
 </template>
 
 <script>
-import Controls from './Controls'
+import Controls from "./Controls"
 export default {
   components: {
     Controls
   }
 }
 </script>
+
+
 
 <style lang="postcss" scoped>
 li.items__skill {

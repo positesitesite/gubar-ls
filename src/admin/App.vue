@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
   .wrapper.admin-wrapper
     
     AppHeader
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import AppHeader from 'blocks/AppHeader';
-import AppNav from 'blocks/AppNav';
+import AppHeader from "blocks/AppHeader";
+import AppNav from "blocks/AppNav";
 
 export default {
   components: {
@@ -23,8 +23,4 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss">
-  @import './styles/main.pcss';
-</style>
 

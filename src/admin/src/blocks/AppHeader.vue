@@ -1,9 +1,10 @@
-<template lang='pug'>
+<template lang="pug">
   header.header
     .header.container
       .user
         .user__img-wrapper
-          img(src='../../src/assets/img/me.png' alt='').user__img
+          img(src="../../../images/content/me.png" alt="").user__img
+          //- ../../src/assets/img/me.png
         .user__name.sub-title Артур Губарь
         .user__breadcrumb Панель администрирования
       a.user__logout Выйти
