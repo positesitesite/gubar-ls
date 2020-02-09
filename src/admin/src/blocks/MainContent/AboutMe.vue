@@ -1,6 +1,6 @@
 <template lang="pug">
   .maincontent
-    .container
+    form(@submit.prevent="addNewCategory").container
       MainContentName(name='Блок "Обо мне"' hasButton="true")
       AboutMeCards
 </template>
@@ -22,7 +22,7 @@ export default {
 <style lang="postcss">
 .maincontent {
   background-color: #ededf5;
-  height: 100%;
+  height: auto;
 }
 
 .maincontent .container {

@@ -82,7 +82,7 @@ export default {
 
   .maincontent {
     background-color: #ededf5;
-    height: 100%;
+    height: auto;
   }
 
   .maincontent .container {

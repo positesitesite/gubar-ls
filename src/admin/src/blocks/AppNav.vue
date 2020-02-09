@@ -15,7 +15,7 @@ export default {
       navItems: [
         {
           name: "Обо мне",
-          link: "/"
+          link: "/about"
         },
         {
           name: "Работы",
