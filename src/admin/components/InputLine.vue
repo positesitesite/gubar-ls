@@ -6,7 +6,7 @@
 <template lang="pug">
   .input__container
     div(v-if="hasTitle").input__title.sub-title {{name}}
-    input(v-bind="$attrs").input__input
+    input(v-bind="$attrs" @input="$emit('input', $event.target.value)").input__input
 </template>
 
 <script>

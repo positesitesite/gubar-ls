@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import ItemControls from "components/ItemControls";
-import Tags from "components/Tags";
+import ItemControls from "./ItemControls";
+import Tags from "./Tags";
 
 export default {
   components: {

@@ -36,7 +36,7 @@ const registerUser = (name, password) => {
             `Регистрация прошла успешно для пользователя: ${name}`
           );
           break;
-      }]
+      }
     }
   );
 };

@@ -1,17 +1,11 @@
 <template lang="pug">
   .wrapper.admin-wrapper
-    
-    AppHeader
-
-    AppNav
-
     router-view
-
 </template>
 
 <script>
-import AppHeader from "blocks/AppHeader";
-import AppNav from "blocks/AppNav";
+import AppHeader from "./blocks/AppHeader";
+import AppNav from "./blocks/AppNav";
 
 export default {
   components: {

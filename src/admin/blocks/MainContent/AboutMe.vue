@@ -1,18 +1,23 @@
 <template lang="pug">
   .maincontent
-    form(@submit.prevent="addNewCategory").container
+    form.container#aboutme-form
       MainContentName(name='Блок "Обо мне"' hasButton="true")
       AboutMeCards
 </template>
 
 <script>
-import MainContentName from "components/MainContentName";
-import AboutMeCards from "components/AboutMeCards";
+import MainContentName from "./../../components/MainContentName";
+import AboutMeCards from "./../../components/AboutMeCards";
 
 export default {
   components: {
     MainContentName,
     AboutMeCards
+  },
+  methods: {
+    addNewCategory() {
+      
+    }
   }
 }
 </script>

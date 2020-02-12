@@ -42,7 +42,7 @@ export default {
 
 
 <style lang="postcss" scoped>
-@import "../../../styles/mixins";
+@import "./../styles/mixins";
 
 nav.nav {
   background-color: $black;

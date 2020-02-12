@@ -1,7 +1,7 @@
 <template lang="pug">
   .auth
     
-    form.auth__form
+    form(@submit.prevent="login").auth__form
       .auth__title.title Авторизация
       .auth__inputs
         .auth__input-row
@@ -11,6 +11,7 @@
             hasTitle="true"
             name="Логин"
             placeholder="Ваш логин"
+            v-model="user.name"
           ).auth__input
         .auth__input-row
           svg(viewBox="0 0 90 93").auth__input-icon
@@ -19,6 +20,7 @@
             hasTitle="true"
             name="Пароль"
             placeholder="Ваш пароль"
+            v-model="user.password"
           ).auth__input
       button(type="submit").auth__button
         .auth__button-text Отправить
@@ -30,12 +32,32 @@
 </template>
 
 <script>
-import {Validator } from "simple-vue-validator";
-import InputLine from "components/InputLine";
+import axios from "axios"
+import { Validator } from "simple-vue-validator";
+import InputLine from "./../../components/InputLine";
+
+const baseUrl = "https://webdev-api.loftschool.com";
+const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjI2OCwiaXNzIjoiaHR0cDovL3dlYmRldi1hcGkubG9mdHNjaG9vbC5jb20vbG9naW4iLCJpYXQiOjE1ODE0Mjg3NzcsImV4cCI6MTU4MTQ0Njc3NywibmJmIjoxNTgxNDI4Nzc3LCJqdGkiOiJXTU5pNzNOZ0pxM2VFc0p6In0.rECghgel3nvz6-G5LTdUmhH_fJKwLxaiYENcsBFiUP0"
 
 export default {
+  data: () => ({
+    user: {
+      name: "",
+      password: ""
+    }
+  }),
   components: {
     InputLine
+  },
+  methods: {
+    login() {
+      axios.post(baseUrl + '/login', this.user).then(response => {
+        console.log(response.data)
+      }).catch(error => {
+        console.log(error.response.data)
+      });
+      console.log(this.user, baseUrl)
+    }
   }
 }
 </script>
@@ -43,7 +65,7 @@ export default {
 
 
 <style lang="postcss" scoped>
-  @import "./../../../styles/mixins.pcss";
+  @import "./../../styles/mixins.pcss";
 
   .auth {
     width: 100%;

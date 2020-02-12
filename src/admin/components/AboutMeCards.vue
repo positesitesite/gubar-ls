@@ -20,11 +20,21 @@
 </template>
 
 <script>
-import Controls from "components/Controls";
-import Items from "components/Items";
-import InputLine from "components/InputLine";
-import LineSeparator from "components/LineSeparator";
-import ButtonAdd from "components/ButtonAdd";
+import { mapActions } from "vuex"
+
+export default {
+  methods: {
+    ...mapActions
+  }
+}
+</script>
+
+<script>
+import Controls from "./Controls";
+import Items from "./Items";
+import InputLine from "./InputLine";
+import LineSeparator from "./LineSeparator";
+import ButtonAdd from "./ButtonAdd";
 
 export default {
   components: {
@@ -40,7 +50,7 @@ export default {
 
 
 <style lang="postcss" scoped>
-@import "../../../styles/mixins";
+@import "./../styles/mixins";
 
   ul.cards {
     width: 100%;

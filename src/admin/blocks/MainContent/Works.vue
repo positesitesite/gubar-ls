@@ -54,13 +54,13 @@
 
 <script type="javascript">
 import UniqueId from 'vue-unique-id';
-import InputLine from "components/InputLine";
-import TextArea from "components/TextArea";
-import Tags from "components/Tags";
-import ButtonsSaveCancel from "components/ButtonsSaveCancel";
-import AddingItem from "components/AddingItem";
-import WorksItems from "components/WorksItems";
-import LineSeparator from "components/LineSeparator";
+import InputLine from "./../../components/InputLine";
+import TextArea from "./../../components/TextArea";
+import Tags from "./../../components/Tags";
+import ButtonsSaveCancel from "./../../components/ButtonsSaveCancel";
+import AddingItem from "./../../components/AddingItem";
+import WorksItems from "./../../components/WorksItems";
+import LineSeparator from "./../../components/LineSeparator";
 
 export default {
   components: {
@@ -78,7 +78,7 @@ export default {
 
 
 <style lang="postcss" scoped>
-@import "./../../../styles/mixins.pcss";
+@import "./../../styles/mixins.pcss";
 
   .maincontent {
     background-color: #ededf5;

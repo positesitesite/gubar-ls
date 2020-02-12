@@ -44,13 +44,13 @@
 </template>
 
 <script type="javascript">
-import InputLine from "components/InputLine";
-import TextArea from "components/TextArea";
-import ButtonsSaveCancel from "components/ButtonsSaveCancel";
-import AddingItem from "components/AddingItem";
-import ReviewsItems from "components/ReviewsItems";
-import ImgUpload from "components/ImgUpload";
-import LineSeparator from "components/LineSeparator";
+import InputLine from "./../../components/InputLine";
+import TextArea from "./../../components/TextArea";
+import ButtonsSaveCancel from "./../../components/ButtonsSaveCancel";
+import AddingItem from "./../../components/AddingItem";
+import ReviewsItems from "./../../components/ReviewsItems";
+import ImgUpload from "./../../components/ImgUpload";
+import LineSeparator from "./../../components/LineSeparator";
 
 export default {
   components: {
@@ -68,7 +68,7 @@ export default {
 
 
 <style lang="postcss" scoped>
-@import "./../../../styles/mixins.pcss";
+@import "./../../styles/mixins.pcss";
 
   .maincontent {
     background-color: #ededf5;

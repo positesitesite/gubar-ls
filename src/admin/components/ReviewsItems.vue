@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import ItemControls from "components/ItemControls";
-import LineSeparator from "components/LineSeparator";
+import ItemControls from "./ItemControls";
+import LineSeparator from "./LineSeparator";
 
 export default {
   components: {
